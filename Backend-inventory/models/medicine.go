@@ -1,12 +1,10 @@
 package models
 
-import "gorm.io/gorm"
-
 type Medicine struct {
-	gorm.Model
-	Nombre            string
-	IngredienteActivo string
-	Marca             string
-	FechaVencimiento  string
-	Cantidad          int
+	ID                uint   `json:"id" gorm:"primary_key"`
+	Nombre            string `json:"nombre"`
+	IngredienteActivo string `json:"ingrediente_activo"`
+	Marca             string `json:"marca"`
+	FechaVencimiento  string `json:"fecha_vencimiento"`
+	Cantidad          int    `json:"cantidad"`
 }
